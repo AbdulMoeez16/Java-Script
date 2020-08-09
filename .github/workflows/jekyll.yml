@@ -38,4 +38,4 @@ jobs:
         
     # Deploy App to Surge
     - name: Deploying project to surge    
-      run: surge ./ daily-fire.surge.sh--token $ {{secrets.SURGE_TOKEN}}  
+      run: surge ./ moeezintikhab_jsprojects.surge.sh--token $ {{secrets.SURGE_TOKEN}}  
