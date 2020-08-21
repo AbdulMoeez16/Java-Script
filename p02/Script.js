@@ -63,3 +63,4 @@ container.addEventListener ('click', (e) => {
 
 // Calculate initial number of seats and their price
 updateSelectedCount ();
+
