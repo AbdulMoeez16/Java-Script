@@ -37,7 +37,7 @@ nav.logo {
     text-align: center;
 }
 
-nav.logo img {
+nav .logo img {
     border-radius: 50%;
     height: 75px;
     width: 75px;
