@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" /> 
+    <title>Landing Page</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="C:\Users\DDC PC\Desktop\eid ul fit r 2020\1d\IMG_2253.JPG" alt="Random User Image">
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <button id="toggle" class="toggle">
+            <i class="fa fa-bars fa-2x"></i>
+        </button>
+        <h1>Landing Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, beatae!</p>
+        <button class="apply" id="open">Apply Now</button>
+    </header>
+    
+
+    <div class="container">
+        <h2>Cloud Native Computing</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum quisquam optio vel incidunt aliquam ad dicta laudantium, provident dignissimos debitis!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus in minima, nam fuga unde eveniet?</p>
+
+        <h2>More Information</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, ex?</p>
+
+        <h2>Syllabus</h2>
+        <ul>
+            <li>P1</li>
+            <li>P2</li>
+            <li>P3</li>
+        </ul>
+    </div>
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <button class="close-btn" id="close">
+                <i class="fa fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-header">
+            <h3>Apply</h3>
+        </div>
+        <div class="modal-content">
+            <p>To sign up for classes please submit the form</p>
+            <form class="modal-form">
+                <div>
+                    <label for="name">Full name</label>
+                    <input type="text" id="name" placeholder="Full name" class="form-input">
+                </div>
+                <div>
+                    <label for="email">Full name</label>
+                    <input type="text" id="email" placeholder="Email" class="form-input">
+                </div>
+                <div>
+                    <label for="Password">Full name</label>
+                    <input type="password" id="password" placeholder="Password" class="form-input">
+                </div>
+                <div>
+                    <label for="Password2">Full name</label>
+                    <input type="password" id="password2" placeholder="Confirm Password" class="form-input">
+                </div>
+                <input type="submit" value="submit" class="submit-btn">
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
