@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Game</title>
+	
+	<link rel="stylesheet" href="game.css">
+	</head>
+	<body>
+	    
+	    <div class="content">
+	        <h1>Hangman</h1>
+	        <p>Can you guess the hidden word? Please enter a letter.</p>
+	    </div>
+	
+	    <div class="main-container">
+	        <!-- svg -->
+	        <svg height="250px" width="200px" class="figure-container">
+	            <line x1="60" y1="20" x2="140" y2="20" />
+	            <line x1="140" y1="20" x2="140" y2="50" />
+	            <line x1="60" y1="20" x2="60" y2="230" />
+	            <line x1="20" y1="230" x2="100" y2="230" />
+	            <!-- Head -->
+	            <circle cx="140" cy="70" r="20" class="hangman-part" />
+	            <circle cx="145" cy="65" r="1" class="hangman-part" />
+	            <circle cx="135" cy="65" r="1" class="hangman-part" />
+	           <!-- Body -->
+	            <line x1="140" y1="90" x2="140" y2="150" class="hangman-part" />
+	            <!-- Arms -->
+	            <line x1="140" y1="120" x2="120" y2="100" class="hangman-part" />
+	            <line x1="140" y1="120" x2="160" y2="100" class="hangman-part" />
+	            <!-- Legs -->
+	            <line x1="140" y1="150" x2="120" y2="180" class="hangman-part" />
+	            <line x1="140" y1="150" x2="160" y2="180" class="hangman-part" />
+	        </svg>
+	
+	        <div class="wrong-letters" id="wrong-letters"></div>
+	
+	        <div class="word" id="word"></div>
+	    </div>
+	
+	
+	
+	    <div class="popup-container" id="popup-container">
+	        <div class="popup">
+	            <h2 id="win-lose"></h2>
+	            <button id="restart">
+	                Restart Game
+	            </button>
+	        </div>
+	    </div>
+	
+	
+	    <div class="slider-container" id="slider-container">
+	        <p>You have already entered this letter.</p>
+	    </div>
+	        
+	
+	
+	    <script src="app.js"></script>
+	</body>
+	</html>
