@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.2);
+    --plus: #2bc971;
+    --minus: #c0363c;
+}
+
+body {
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    width: 30%;
+    margin: 30px auto;
+    background: #1565c0;
+    color: white;
+    height: 850px;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 35px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.balance-heading {
+    text-align: center;
+    font-size: 25px;
+}
+
+.balance-num {
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.balance-num {
+    margin-top: -15px;
+    font-size: 25px;
+}
+
+.balance-heading {
+    color: white;
+    text-align: center;
+    font-size: 25px;
+    margin-top: -15px;
+}
+
+.income-expense-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    box-shadow: var(--box-shadow);
+    height: 120px;
+}
+
+.income-expense-container > div {
+    flex: 1;
+    text-align: center;
+}
+
+.plus-div {
+    background: #08284d;
+    border-radius: 5px;
+}
+
+.minus-div {
+    background: #08284d;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.money {
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin: 5px 0;
+    margin-top: -13px;
+}
+
+.money.plus {
+    color: var(--plus);
+}
+
+.money.minus {
+    color: var(--minus);
+}
+
+.transaction-div {
+    background: #08284d;
+    width: 90%;
+    margin: auto;
+    height: 50px;
+    position: relative;
+}
+
+.transaction {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 10px;
+}
+
+.fas {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 90%;
+}
+
+.collapse-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+}
+
+
+.fas {
+    margin-left: -25em !important;
+    margin-top: 2em !important;
+    cursor: pointer;
+} 
+
+
+.transaction-btn {
+    background-color:#08284d;
+    color: white; 
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 17px;
+    transition: 0.4s;
+  }
+  .panel {
+    padding: 0 18px;
+    display: none;
+    background-color: #20406f;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+
+  .add-transaction {
+      text-align: center;
+  }
+
+  label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: #1d469d;
+    box-shadow: var(--box-shadow);
+    color: white;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    width: 100%;
+    padding: 10px;
+    margin-top: -2px;
+}
+
+.new-transactions {
+    border-bottom: 4px solid #aaa;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.description {
+    font-size: 20px;
+    text-align: center;
+}
+
+.form-container {
+    text-align: center;
+}
+
+.add-income {
+    font-size: 15px;
+    margin-top: 20px;
+    background: var(--plus);
+    height: 51px;
+    width: 13em;
+    border: var(--plus);
+    color: white;
+}
+
+.add-expense {
+    font-size: 15px;
+    margin-top: 20px;
+    background: var(--minus);
+    height: 51px;
+    width: 13em;
+    border: var(--minus);
+    color: white;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.list li {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    padding-left: 40px;
+    margin: 10px 0;
+}
+
+.list li.plus {
+    border-right: 5px solid var(--plus);
+}
+
+.list li.minus {
+    border-right: 5px solid var(--minus);
+}
+
+.delete-btn {
+    background-color: var(--minus);
+    border: 0;
+    color: white;
+    padding: 3px 6px;
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    top: 50%;
+    left: 16%;
+    transform: translate(-150%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+/*
+.transaction-div {
+    background: white;
+    height: 55px;
+    color: black;
+    width: 100%;
+    padding-top: 0.1px;
+    cursor: pointer;
+}
+.transaction {
+    font-size: 20px;
+    text-align: center;
+}
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+.list li {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+}
+.list li.plus {
+    border-right: 5px solid var(--plus);
+}
+.list li.minus {
+    border-right: 5px solid var(--minus);
+}
+.delete-btn {
+    background-color: var(--minus);
+    border: 0;
+    color: white;
+    padding: 3px 6px;
+    position: absolute;
+    height: 38px;
+    width: 38px;
+    top: 50%;
+    left: 5%;
+    transform: translate(-150%, -50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.list li:hover .delete-btn {
+    opacity: 1;
+}
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+input {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    display: block;
+    font-size: 16px;
+    padding: 10px;
+    width: 100%;
+}
+.btn {
+    background-color: #1d469d;
+    box-shadow: var(--box-shadow);
+    color: white;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 20px 0 30px;
+    width: 100%;
+    padding: 10px;
+    margin-top: -2px;
+}
+.new-transactions {
+    border-bottom: 4px solid #aaa;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.description {
+    font-size: 20px;
+    text-align: center;
+} */

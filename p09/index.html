@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+
+    <!-- css custom file link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fontawesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+
+    <!-- fav icon -->
+    <link rel="shortcut icon" href="img/app.js.png">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h3 class="heading">Expense Tracker</h3>
+        <h4 class="balance-heading">Balance</h4>
+        <h1 id="balance" class="balance-num">$0.00</h1>
+
+        <div class="income-expense-container" id="income-expense-container">
+            <div class="plus-div">
+                <h4 class="income">Income</h4>
+                <p class="money plus" id="money-plus">+$0.00</p>
+            </div>
+
+            <div class="minus-div">
+                <h4 class="expense">Expense</h4>
+                <p class="money minus" id="money-minus">+$0.00</p>
+            </div>
+        </div>
+
+        <button class="transaction-btn" id="accordion">Transaction History</button>
+        
+        <div class="panel" id="panel">
+            <ul class="list" id="list"></ul>
+        </div>
+
+
+        <h1 class="add-transaction">Add New Transaction</h1>
+        <div class="form-container">
+            <form id="form">
+                <div class="form-control">
+                    <label for="description" class="description">Description: </label>
+                    <input type="text" id="description" placeholder="Description of Transaction" >
+                </div>
+                <div class="form-control">
+                    <label for="amount">
+                        Transaction Amount <br /> 
+                        For income, enter positive value and for expense, enter negative value.
+                    </label>
+                    <input type="number" id="amount" placeholder="Transaction Amount">
+                </div>   
+                <button class="btn">Add Transaction</button>
+            </form> 
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
