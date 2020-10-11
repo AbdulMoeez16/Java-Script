@@ -9,14 +9,15 @@ const title = document.getElementById('title');
 const cover = document.getElementById('cover');
 
 // List of Songs
-const songList = [  'Dirilis Ertugrul', 
-                    'Kurulus Osman', 
-                    'Pirates of the Caribbean', 
-                    'The Dark Knight'
+const songList = [  '70s Mashup', 
+                    'Dil Chahte ho', 
+                    'Suhaani raat', 
+                    'Sanam Puri'
                 ];
 
+
 // Track which song is currently playing
-let currentSong = 1;
+let currentSong = 0;
 
 // Update the song to the DOM
 function loadSong(song) {
